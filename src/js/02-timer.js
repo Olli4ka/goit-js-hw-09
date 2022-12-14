@@ -1,6 +1,7 @@
 import flatpickr from 'flatpickr';
 import 'flatpickr/dist/flatpickr.min.css';
 require('flatpickr/dist/themes/material_green.css');
+import Notiflix from 'notiflix';
 
 const refs = {
   startBtn: document.querySelector('[data-start]'),
@@ -21,7 +22,7 @@ const options = {
     let selectedDate = selectedDates[0];
     let ms = selectedDate - getNowDate();
     if (ms < 0) {
-      window.alert('Please choose a date in the future');
+      Notiflix.Notify.failure('Please choose a date in the future');
       return;
     }
 

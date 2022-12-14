@@ -34,3 +34,7 @@ img {
 .label {
   font-size: small;
 }
+
+button[data-start] {
+  background-color: mediumaquamarine;
+}
